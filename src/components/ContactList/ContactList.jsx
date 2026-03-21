@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 export const ContactList = () => {
   const allContacts = useSelector((state) => state.contacts.contacts);
+  console.log(allContacts);
   const lastDeletedContact = useSelector(
     (state) => state.contacts.lastDeletedContact
   );
