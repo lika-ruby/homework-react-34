@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { restoreContact } from "../../redux/contactsSlice";
+import { restoreContactsApi } from "../../redux/operations.js";
 import { Button } from "./RestoreButton.js";
 
 export const RestoreButton = () => {
@@ -9,7 +9,7 @@ export const RestoreButton = () => {
   );
 
   const handleRestore = () => {
-    if (lastDeletedContact) dispatch(restoreContact());
+    if (lastDeletedContact) dispatch(restoreContactsApi(lastDeletedContact));
   };
 
   return (

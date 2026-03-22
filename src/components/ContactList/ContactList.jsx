@@ -20,6 +20,8 @@ export const ContactList = () => {
       )
     : allContacts;
 
+  console.log(contacts);
+
   return (
     <Container>
       <Wrapper>

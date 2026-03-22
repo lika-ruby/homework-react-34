@@ -1,7 +1,7 @@
 import { Form, Labels, Label, Input, Button } from "./ContactForm.js";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice.js";
+import { addContactsApi } from "../../redux/operations.js";
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -22,7 +22,7 @@ export const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addContact(name, number));
+    dispatch(addContactsApi({ name, number }));
     setName("");
     setNumber("");
   };
